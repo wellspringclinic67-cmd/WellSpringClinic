@@ -1,0 +1,590 @@
+/* ================================
+   Global Styles & Reset
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cascadia Code;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================================
+   Navbar Styles
+================================ */
+#navbar {
+  background: #ffffff;
+  color: #0d1a26;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar li {
+  margin-left: 20px;
+}
+	  
+/* Base Container */
+.containerbase {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-decoration: justify;
+}
+
+/* Card Wrapper for Sections */
+.card {
+  background: #154958;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  text-align: center;
+}
+
+/* Section Headers */
+.card h2 {
+  font-size: 2rem;
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+.card p {
+  font-size: 1rem;
+  color:white;
+}
+
+/* Banner with Clinic Hours */
+.clinic-banner {
+  position: relative;
+  height: 80vh;
+  background: url('../img/banner.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top:-60px;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clinic-banner-content {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+}
+
+.clinic-banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.clinic-banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Clinic Hours Box */
+.clinic-hours-box {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.clinic-hours-box h2 {
+  color: #1e90ff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.clinic-hours-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.clinic-hours-box ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.clinic-hours-box .btn {
+  background: #1e90ff;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.clinic-hours-box .btn:hover {
+  background: #0f6ebc;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clinic-banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .clinic-banner-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Featured Services Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Individual Service Card */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  padding: 15px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Service Image */
+.service-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Service Title */
+.service-card h3 {
+  font-size: 1.1rem;
+  color: #1e90ff;
+  margin: 0;
+}
+
+
+/* Button */
+.btn {
+  background: #1e90ff;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0f6ebc;
+}
+
+/* Nav Container */
+.container {
+  max-width: 960px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2rem;
+  color: #1e90ff;
+  margin-bottom: 30px;
+}
+
+.container ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container ul li {
+  background: #ffffff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+/* ================================
+   SERVICES SECTION
+================================ */
+
+.section-featured-services {
+  padding: 120px 20px 60px;
+  background: #f4f8fc;
+  margin-top:-50px;
+}
+
+.card-services {
+  max-width: 1100px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  margin-top:-90px;
+}
+
+.card-services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #154958;
+}
+
+.grid-featured-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.box-service {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.box-service:hover {
+  transform: translateY(-6px);
+}
+
+.box-service img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-title {
+  font-size: 1.3rem;
+  color: #1e90ff;
+  margin-top: 15px;
+}
+
+.service-desc {
+  padding: 0 15px 20px;
+  font-size: 1rem;
+  color: #555;
+  text-align:justify;
+}
+
+/* ================================
+   BMI Output
+================================ */
+
+.bmi-output {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.bmi-output span {
+  color: #1e90ff;
+}
+form label {
+	color:white;
+	float:left;
+}
+
+/* ================================
+   APPOINTMENT FORM STYLES
+================================ */
+
+.appointment-section {
+  background: #f5f9fc;
+  padding: 80px 20px;
+  margin-top:-130px;
+}
+
+.appointment-container {
+  max-width: 600px;
+  background: white;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-container h2 {
+  text-align: center;
+  color: #1e90ff;
+  margin-bottom: 5px;
+}
+
+.appointment-container p {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #666;
+}
+
+#appointment-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  margin-top: 15px;
+  color:black;
+}
+
+#appointment-form input,
+#appointment-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 3px;
+}
+
+#appointment-form textarea {
+  resize: vertical;
+}
+
+
+/* ================================
+   Form Styles
+================================ */
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #1e90ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #0f6ebc;
+}
+
+/* ================================
+   About Us Style
+================================ */
+
+.about-section, .mission-section, .team-section {
+  padding-top: 60px;
+  margin-top: -90px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.team-member {
+  background: #fff;
+  border: 1px solid #e4ecf5;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  color: #1e90ff;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   Contact Form
+================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: -50px;
+}
+
+.contact-form-section form input,
+.contact-form-section form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form-section form button {
+  background: #1e90ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form-section form button:hover {
+  background: #0f6ebc;
+}
+
+.map-container {
+  width: 100%;
+  height: 350px;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+h3 {
+	color:white;
+}
+
+/* ================================
+   Footer
+================================ */
+footer {
+  background: #8FBC8F;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+@media (max-width: 768px) {
+  #navbar ul {
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none; /* for now */
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card-services {
+    padding: 20px;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-desc {
+    font-size: 0.95rem;
+  }
+
+  .grid-featured-services {
+    grid-template-columns: 1fr;
+  }
+}
